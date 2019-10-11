@@ -1,0 +1,29 @@
+{
+  "name": "ui-project-templete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poc-user001/ui-project-templete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.4",
+    "grunt-connect-proxy": "^0.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^2.1.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "jit-grunt": "^0.10.0"
+  },
+  "bugs": {
+    "url": "https://github.com/poc-user001/ui-project-templete/issues"
+  },
+  "homepage": "https://github.com/poc-user001/ui-project-templete#readme"
+}
