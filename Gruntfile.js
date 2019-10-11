@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             proxy: {
                 // host: '101.53.157.190',
                 host: 'localhost',
-                port: 8080
+                port: 3030
             }
         },
         connect: {
@@ -35,7 +35,7 @@ module.exports = function (grunt) {
                     port: '<%= settings.proxy.port %>',
                     headers: {
                         "host": '<%= settings.proxy.host %>',
-                        port: '<%= settings.proxy.port %>'
+                        "port": '<%= settings.proxy.port %>'
                     },
                     changeOrigin: true,
                     rewrite: {
@@ -99,6 +99,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     // grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.registerTask('default', ['connect', 'watch']);
+    grunt.registerTask('default', ['configureProxies:server', 'connect', 'watch']);
 
 }

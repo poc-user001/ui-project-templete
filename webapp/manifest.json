@@ -8,7 +8,17 @@
 			"version": "1.0.0"
 		},
 		"title": "{{appTitle}}",
-		"description": "{{appDescription}}"
+		"description": "{{appDescription}}",
+		"dataSources": {
+			"mainService": {
+				"uri": "/destinations/poc/testodata/md/odata/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
 	},
 
 	"sap.ui": {
@@ -53,6 +63,15 @@
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
 					"bundleName": "com.golit.ui.template.i18n.i18n"
+				}
+			},
+			"": {
+				"dataSource": "mainService",
+				"preload": true,
+				"useBatch": false,
+				"settings": {
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "none"
 				}
 			}
 		},
